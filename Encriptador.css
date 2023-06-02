@@ -1,0 +1,228 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    background-color: #C1A37F;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.flor{
+    position: absolute;
+    top: 2%;
+    left: 1%;
+    width: 8%;
+}
+
+/*contenedor de los elementos de pagina*/
+
+.contenedor {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+/* caja de encriptar y desencriptar*/
+
+#texto {
+    font-size: 30px;
+    font-style: normal;
+    color: #FFF5E8;
+    background-color: #C1A37F;
+    border: none;
+}
+
+.input-padron {
+    position: absolute;
+    top: 15%;
+    left: 15%;
+    width: 50%;
+    height: 50%;
+    line-height: 150%;
+    margin: 0 0 20px;
+    padding: 10px 25px;
+}
+
+#texto::placeholder {
+    color: #FFF5E8;
+}
+
+#texto:active, #texto:focus {
+    border: none;
+    outline: none;
+}
+
+/*advertencia: solo letras minusculas y sin acentos*/
+.advertencia {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0;
+    gap: 8px;
+    width: 80%;
+    position: absolute;
+    top: 70%;
+    left: 15%;
+    color: #84623A;
+    font-weight: bold;
+}
+
+.advertencia p {
+    font-style: normal;
+    font-weight: bold;
+    flex: none;
+}
+
+
+/*botones*/
+.botones {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    position: absolute;
+    width: 80%;
+    top: 75%;
+    left: 15%;
+    padding: 24px;
+}
+.encriptar {
+    color: #FFF5E8;
+    background-color: #84623A;
+}
+
+.desencriptar {
+    color: #84623A;
+    background-color: #FFF5E8;
+}
+
+.encriptar, .desencriptar {
+    align-items: center;
+    justify-content: center;
+    left: 15%;
+    padding: 2%;
+    margin: 1%;
+    gap: 8px;
+    width: 25%;
+    text-align: center;
+    box-sizing: border-box;
+    border-radius: 20px;
+    border-style: hidden;
+    font-size: 15px;
+    cursor: pointer;
+
+}
+
+.encriptar:hover, .desencriptar:hover {
+    transform: scale(1.05);
+}
+
+
+/*caja de mensaje*/
+
+.mensaje { 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 25%;
+    height: 90%;
+    position: absolute;
+    left: 60%;
+    top: 5%;
+    padding: 2%;
+    margin: 0 1.5%;
+    background-color: #FFF5E8;
+    border-radius: 10px;
+    text-align: center;
+    box-sizing: border-box;
+    color: #84623A;
+}
+
+.dormido{
+    width: 80%;
+}
+
+.mensaje h2 {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 40px 0;
+}
+
+.mensaje p {
+    font-size: 15px;
+}
+
+/*pie de pagina*/
+footer {
+    position: absolute;
+    bottom: 1%;
+    right: 45%;
+}
+
+.propiedad {
+    color: #FFF5E8;
+    font-size: 13px;
+}
+
+/*responsivo*/
+@media screen and (max-width:960px)  {
+    .flor{
+        top: 0;
+        display: none;
+        visibility: hidden;
+    }
+    .input-padron {
+        display: flex;
+        flex-direction: row;
+        height: 30%;
+        width: 100%;
+        top: 5%;
+    }
+
+    .advertencia{
+        width: 80%;
+        left: 10%;
+        top: 37%;
+    }
+
+    .advertencia p {
+        font-size: 20px;
+    }
+
+    .botones {
+        width: 100%;
+        height: 10%;
+        top:40%;
+        margin: 0;
+        left: 0%;
+    }
+
+    .encriptar, .desencriptar {
+        width: 48%;
+    }
+
+    .mensaje {
+        
+        padding: 5%;
+        width: 100%;
+        height: 20%;
+        left: 0%;
+        top: 55%;
+    }
+    .mensaje img {
+        top: 0;
+        display: none;
+        visibility: hidden;
+    }
+    .mensaje h2, .mensaje p {
+        padding: 1%;
+        margin: 2%;
+    }
+    footer {
+        position: absolute;
+        top: 90%;
+    }
+    
+}
